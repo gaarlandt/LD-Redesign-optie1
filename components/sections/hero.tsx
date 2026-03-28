@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -9,7 +10,7 @@ export function Hero() {
       {/* Background image — right half on desktop, full bleed mobile */}
       <div className="absolute inset-0 lg:left-1/2">
         <Image
-          src="/images/hero.png"
+          src={asset("/images/hero.png")}
           alt="Twee vrouwen lachen met hun honden"
           fill
           priority
@@ -59,7 +60,7 @@ export function Hero() {
           {/* Trust nudge */}
           <div className="mt-10 flex items-center gap-4">
             <div className="flex -space-x-2">
-              {["/images/community.png", "/images/training.png", "/images/about.png"].map(
+              {[asset("/images/community.png"), asset("/images/training.png"), asset("/images/about.png")].map(
                 (src, i) => (
                   <div
                     key={i}

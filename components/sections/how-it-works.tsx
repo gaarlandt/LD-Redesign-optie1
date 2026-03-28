@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { UserPlus, Play, Users } from "lucide-react";
 
@@ -72,7 +73,7 @@ export function HowItWorks() {
       {/* Visual: training photo */}
       <div className="rounded-2xl overflow-hidden aspect-[21/7] relative">
         <Image
-          src="/images/training.png"
+          src={asset("/images/training.png")}
           alt="Eigenaar traint zijn hond in het park"
           fill
           sizes="100vw"

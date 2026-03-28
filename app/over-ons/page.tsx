@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { CheckCircle2, Award } from "lucide-react";
 
@@ -39,7 +40,7 @@ export default function OverOns() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
             <Image
-              src="/images/about.png"
+              src={asset("/images/about.png")}
               alt="Elien met een puppy"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

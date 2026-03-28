@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 export function FinalCta() {
   return (
@@ -9,7 +10,7 @@ export function FinalCta() {
       {/* Background image */}
       <div className="absolute inset-0 opacity-20">
         <Image
-          src="/images/kid-dog.png"
+          src={asset("/images/kid-dog.png")}
           alt=""
           fill
           sizes="100vw"

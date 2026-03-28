@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { Calendar, Video, BookOpen, CheckSquare } from "lucide-react";
 
@@ -108,7 +109,7 @@ export default function Puppyagenda() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
             <Image
-              src="/images/beagle.png"
+              src={asset("/images/beagle.png")}
               alt="Puppy speelt buiten"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

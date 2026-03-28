@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { CheckCircle2, Video, BookOpen, Headphones, Users } from "lucide-react";
 
@@ -37,7 +38,7 @@ export function Hope() {
         <div className="relative order-2 lg:order-1">
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
             <Image
-              src="/images/hope.png"
+              src={asset("/images/hope.png")}
               alt="Hondeneigenaar geniet thuis met zijn hond"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

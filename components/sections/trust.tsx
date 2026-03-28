@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { Quote } from "lucide-react";
 
@@ -15,21 +16,21 @@ const testimonials = [
       "Eindelijk een aanpak waarbij ik elke dag weet wat ik doe. De puppyagenda is een uitkomst — geen stress meer over of ik het goed doe.",
     name: "Lisa de Vries",
     dog: "eigenaar van Borre (Labrador, 4 mnd)",
-    image: "/images/community.png",
+    image: asset("/images/community.png"),
   },
   {
     quote:
       "Na twee weken Let's Dog slaapt mijn pup door de nacht. Ik had nooit gedacht dat het zo snel beter kon gaan.",
     name: "Tom Bakker",
     dog: "eigenaar van Luna (Australische Herder, 3 mnd)",
-    image: "/images/training.png",
+    image: asset("/images/training.png"),
   },
   {
     quote:
       "De video's zijn helder en praktisch. Geen gedoe, gewoon uitleg die werkt. En de community is heel fijn — ik ben niet de enige die worstelt.",
     name: "Emma Smits",
     dog: "eigenaar van Max (Border Collie, 5 mnd)",
-    image: "/images/about.png",
+    image: asset("/images/about.png"),
   },
 ];
 
