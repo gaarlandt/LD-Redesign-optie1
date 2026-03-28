@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/hero";
 import { Problem } from "@/components/sections/problem";
 import { Hope } from "@/components/sections/hope";
+import { BreedSelector } from "@/components/sections/breed-selector";
 import { Trust } from "@/components/sections/trust";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Pricing } from "@/components/sections/pricing";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Problem />
       <Hope />
+      <BreedSelector />
       <Trust />
       <HowItWorks />
       <Pricing />
