@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
