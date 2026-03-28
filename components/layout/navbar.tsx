@@ -9,6 +9,7 @@ const links = [
   { href: "/puppyagenda", label: "Puppyagenda" },
   { href: "/prijzen", label: "Prijzen" },
   { href: "/veelgestelde-vragen", label: "FAQ" },
+  { href: "/keuzehulp", label: "Keuzehulp" },
 ];
 
 export function Navbar() {

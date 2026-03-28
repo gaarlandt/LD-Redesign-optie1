@@ -27,6 +27,7 @@ export function Footer() {
                 { href: "/puppyagenda", label: "Puppyagenda" },
                 { href: "/prijzen", label: "Prijzen" },
                 { href: "/veelgestelde-vragen", label: "FAQ" },
+                { href: "/keuzehulp", label: "Keuzehulp" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
