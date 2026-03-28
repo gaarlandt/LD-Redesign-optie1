@@ -71,7 +71,7 @@ export function HowItWorks() {
       </div>
 
       {/* Visual: training photo */}
-      <div className="rounded-2xl overflow-hidden aspect-[21/7] relative">
+      <div className="rounded-2xl overflow-hidden aspect-[4/3] md:aspect-[21/7] relative">
         <Image
           src={asset("/images/training.png")}
           alt="Eigenaar traint zijn hond in het park"
@@ -79,12 +79,12 @@ export function HowItWorks() {
           sizes="100vw"
           className="object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#141414]/50 to-transparent flex items-center px-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141414]/70 md:from-[#141414]/50 to-transparent flex items-end md:items-center p-6 md:px-10">
           <div className="max-w-sm">
-            <p className="font-heading font-bold text-2xl text-white mb-4 leading-snug">
+            <p className="font-heading font-bold text-xl md:text-2xl text-white mb-2 md:mb-4 leading-snug">
               De mobile app is er voor onderweg.
             </p>
-            <p className="text-white/75 text-[15px] leading-relaxed">
+            <p className="text-white/75 text-sm md:text-[15px] leading-relaxed">
               Bekijk video&apos;s tijdens je wandeling of trainingssessie. De web app is het hart — de app ondersteunt.
             </p>
           </div>

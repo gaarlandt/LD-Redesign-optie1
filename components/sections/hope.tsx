@@ -46,7 +46,7 @@ export function Hope() {
             />
           </div>
           {/* Floating badge */}
-          <div className="absolute -bottom-5 -right-5 bg-[#DFF0C3] rounded-2xl p-5 shadow-lg max-w-[200px]">
+          <div className="absolute -bottom-5 right-4 lg:-right-5 bg-[#DFF0C3] rounded-2xl p-4 lg:p-5 shadow-lg max-w-[180px] lg:max-w-[200px]">
             <BookOpen size={20} className="text-[#75876D] mb-2" strokeWidth={1.75} />
             <p className="text-sm font-semibold text-[#141414] leading-snug">
               Puppyagenda voor elke week
