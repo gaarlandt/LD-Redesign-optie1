@@ -4,25 +4,37 @@ import { asset } from "@/lib/utils";
 export function Hero() {
   return (
     <section
-      className="relative min-h-[100dvh] bg-[#75876D] flex items-center overflow-hidden"
+      className="relative bg-[#75876D] flex flex-col lg:flex-row lg:items-center lg:min-h-[100dvh] overflow-hidden"
       aria-label="Hero"
     >
-      {/* Background image — right half on desktop, full bleed mobile */}
-      <div className="absolute inset-0 lg:left-1/2">
+      {/* Mobile: visible image at top */}
+      <div className="relative w-full aspect-[16/10] lg:hidden">
         <Image
           src={asset("/images/hero.png")}
           alt="Twee vrouwen lachen met hun honden"
           fill
           priority
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-center opacity-40 lg:opacity-70"
+          sizes="100vw"
+          className="object-cover object-center"
         />
-        {/* Gradient overlay — left fade on desktop */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#75876D] via-[#75876D]/80 to-transparent lg:via-[#75876D]/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#75876D]/60 via-transparent to-[#75876D]" />
+      </div>
+
+      {/* Desktop: absolute right-half background */}
+      <div className="absolute inset-0 left-1/2 hidden lg:block">
+        <Image
+          src={asset("/images/hero.png")}
+          alt="Twee vrouwen lachen met hun honden"
+          fill
+          priority
+          sizes="50vw"
+          className="object-cover object-center opacity-70"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#75876D] via-[#75876D]/30 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-24 pb-16 lg:pt-32 lg:pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full pt-6 pb-12 lg:pt-32 lg:pb-24">
         <div className="max-w-xl">
           {/* Eyebrow */}
           <p className="inline-flex items-center gap-2 text-sm font-medium text-white/80 mb-6 bg-white/10 rounded-full px-4 py-1.5 backdrop-blur-sm">
