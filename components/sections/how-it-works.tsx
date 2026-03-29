@@ -73,7 +73,7 @@ export function HowItWorks() {
       {/* Visual: training photo */}
       <div className="rounded-2xl overflow-hidden aspect-[4/3] md:aspect-[21/7] relative">
         <Image
-          src={asset("/images/training.png")}
+          src={asset("/images/training.jpeg")}
           alt="Eigenaar traint zijn hond in het park"
           fill
           sizes="100vw"

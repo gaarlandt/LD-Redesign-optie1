@@ -34,7 +34,7 @@ export function BreedSelector() {
         {/* Image */}
         <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
           <Image
-            src={asset("/images/dalmatian.png")}
+            src={asset("/images/dalmatian.jpeg")}
             alt="Dalmatiër — ontdek welk ras bij je past"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

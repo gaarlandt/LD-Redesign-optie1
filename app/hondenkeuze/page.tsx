@@ -31,7 +31,7 @@ export default function Hondenkeuze() {
       {/* Image accent */}
       <div className="relative h-64 md:h-80 w-full">
         <Image
-          src={asset("/images/puppy-harness.png")}
+          src={asset("/images/puppy-harness.jpeg")}
           alt="Puppy met tuigje — klaar voor een nieuw avontuur"
           fill
           sizes="100vw"

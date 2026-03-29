@@ -10,7 +10,7 @@ export function Hero() {
       {/* Mobile: visible image at top */}
       <div className="relative w-full aspect-[16/10] lg:hidden">
         <Image
-          src={asset("/images/hero.png")}
+          src={asset("/images/hero.jpeg")}
           alt="Twee vrouwen lachen met hun honden"
           fill
           priority
@@ -23,7 +23,7 @@ export function Hero() {
       {/* Desktop: absolute right-half background */}
       <div className="absolute inset-0 left-1/2 hidden lg:block">
         <Image
-          src={asset("/images/hero.png")}
+          src={asset("/images/hero.jpeg")}
           alt="Twee vrouwen lachen met hun honden"
           fill
           priority
@@ -72,7 +72,7 @@ export function Hero() {
           {/* Trust nudge */}
           <div className="mt-10 flex items-center gap-4">
             <div className="flex -space-x-2">
-              {[asset("/images/community.png"), asset("/images/training.png"), asset("/images/about.png")].map(
+              {[asset("/images/community.jpeg"), asset("/images/training.jpeg"), asset("/images/about.jpeg")].map(
                 (src, i) => (
                   <div
                     key={i}

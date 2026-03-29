@@ -38,7 +38,7 @@ export function Hope() {
         <div className="relative order-2 lg:order-1">
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5]">
             <Image
-              src={asset("/images/hope.png")}
+              src={asset("/images/hope.jpeg")}
               alt="Hondeneigenaar geniet thuis met zijn hond"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

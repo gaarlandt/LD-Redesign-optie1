@@ -73,7 +73,7 @@ export default function Contact() {
 
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
             <Image
-              src={asset("/images/problem.png")}
+              src={asset("/images/problem.jpeg")}
               alt="Hond met eigenaar — persoonlijk consult"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -40,7 +40,7 @@ export default function OverOns() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
             <Image
-              src={asset("/images/elien.png")}
+              src={asset("/images/elien.jpeg")}
               alt="Elien met een puppy"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
