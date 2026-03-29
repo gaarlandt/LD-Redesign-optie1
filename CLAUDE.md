@@ -10,7 +10,7 @@ Marketing website for Let's Dog, a puppy training platform. Built as a static Ne
 - **Animations**: Framer Motion
 - **Icons**: Lucide React + inline SVGs (WhatsApp, TikTok)
 - **Fonts**: National2 (headings, local OTF), DM Sans (body, Google Fonts)
-- **Deployment**: Firebase Hosting (project: `website-f396e`)
+- **Deployment**: Firebase Hosting (project: `project-60f05f55-1ef9-48e3-b20`, target: `website-content`, site: `website-letsdog`)
 
 ## Key Commands
 ```bash
@@ -67,7 +67,8 @@ Defined in `components/layout/navbar.tsx` (desktop + mobile) and `components/lay
 ## Deployment
 - **Production**: Push to `main` → auto-deploys to Firebase live
 - **Staging**: Push to any other branch → creates temporary Firebase preview URL (expires in 7 days)
-- **Secret required**: `FIREBASE_SERVICE_ACCOUNT` in GitHub repo settings
+- **Secret required**: `FIREBASE_SERVICE_ACCOUNT` in GitHub repo settings (from project `project-60f05f55-1ef9-48e3-b20`)
+- **Hosting target**: `website-content` → site `website-letsdog` (uses Firebase hosting targets to support multiple sites in the same project)
 
 ## Feature Development Workflow
 Use the `/new-feature` skill for all new features. This handles branch creation, implementation, and PR workflow.
