@@ -30,5 +30,6 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: website-f396e
+          projectId: project-60f05f55-1ef9-48e3-b20
           channelId: live
+          target: website-content
