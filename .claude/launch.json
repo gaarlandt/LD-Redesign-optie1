@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "letsdog-website",
+      "runtimeExecutable": "/Users/jurriaan/.nvm/versions/node/v20.19.5/bin/node",
+      "runtimeArgs": [
+        "node_modules/next/dist/bin/next",
+        "dev",
+        "--turbopack",
+        "--port",
+        "3000"
+      ],
+      "port": 3000,
+      "env": {
+        "PATH": "/Users/jurriaan/.nvm/versions/node/v20.19.5/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  ]
+}

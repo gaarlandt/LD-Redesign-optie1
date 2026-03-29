@@ -17,6 +17,9 @@
 .DS_Store
 *.pem
 
+# docs assets (too large for git)
+docs/Brand Images/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

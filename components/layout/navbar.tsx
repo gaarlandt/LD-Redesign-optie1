@@ -6,10 +6,11 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "/over-ons", label: "Over ons" },
+  { href: "/hondenkeuze", label: "Hondenkeuze" },
   { href: "/puppyagenda", label: "Puppyagenda" },
   { href: "/prijzen", label: "Prijzen" },
   { href: "/veelgestelde-vragen", label: "FAQ" },
-  { href: "/keuzehulp", label: "Keuzehulp" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -49,7 +50,7 @@ export function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-[15px] text-[#141414]/80 hover:text-[#141414] transition-colors duration-200 font-medium"
+                className="relative text-[15px] text-[#141414]/80 hover:text-[#141414] transition-colors duration-200 font-medium after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-[#75876D] after:transition-all after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </Link>

@@ -24,10 +24,10 @@ export function Footer() {
               {[
                 { href: "/", label: "Homepage" },
                 { href: "/over-ons", label: "Over ons" },
+                { href: "/hondenkeuze", label: "Hondenkeuze" },
                 { href: "/puppyagenda", label: "Puppyagenda" },
                 { href: "/prijzen", label: "Prijzen" },
                 { href: "/veelgestelde-vragen", label: "FAQ" },
-                { href: "/keuzehulp", label: "Keuzehulp" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>

@@ -5,19 +5,19 @@ import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Keuzehulp — Welk ras past bij jou? | Let's Dog",
+  title: "Hondenkeuze — Welk ras past bij jou? | Let's Dog",
   description:
     "Beantwoord 8 korte vragen en ontdek welk hondenras het beste bij jouw levensstijl past. Gratis, wetenschappelijk onderbouwd rasadvies.",
 };
 
-export default function Keuzehulp() {
+export default function Hondenkeuze() {
   return (
     <>
       {/* Hero */}
       <div className="bg-[#75876D] pt-32 pb-20 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-4">
-            Keuzehulp
+            Hondenkeuze
           </p>
           <h1 className="font-heading font-bold text-4xl md:text-5xl text-white leading-tight max-w-xl">
             Welk ras past bij jou?
@@ -44,7 +44,7 @@ export default function Keuzehulp() {
       <SectionWrapper className="bg-white">
         <div className="text-center mb-10">
           <h2 className="font-heading font-bold text-2xl md:text-3xl text-[#141414] mb-3">
-            Start de keuzehulp
+            Start de hondenkeuze
           </h2>
           <p className="text-[#141414]/60 text-[16px] max-w-md mx-auto">
             De test duurt ongeveer 2 minuten. Na afloop krijg je direct je resultaat.
@@ -54,7 +54,7 @@ export default function Keuzehulp() {
         <div className="rounded-2xl overflow-hidden border border-[#141414]/10 bg-[#EFE8E4]">
           <iframe
             src="https://keuzehulp.letsdog.nl"
-            title="Let's Dog Keuzehulp — rasadvies quiz"
+            title="Let's Dog Hondenkeuze — rasadvies quiz"
             className="w-full min-h-[700px] border-0"
             loading="lazy"
             allow="clipboard-write"
@@ -62,7 +62,7 @@ export default function Keuzehulp() {
         </div>
 
         <p className="text-center text-sm text-[#141414]/50 mt-6">
-          Laadt de keuzehulp niet?{" "}
+          Laadt de hondenkeuze niet?{" "}
           <a
             href="https://keuzehulp.letsdog.nl"
             target="_blank"

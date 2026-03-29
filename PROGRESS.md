@@ -1,14 +1,52 @@
-# Breed Selector Feature — Progress
+# Project Progress
 
-| Phase | Status |
-|-------|--------|
-| 1. Setup & Assets (Elien photo) | Pending user action |
-| 2. Elien photo on About page | Done |
-| 3. WhatsApp floating button | Done |
-| 4. Keuzehulp integration | Done |
-| 5. Contact page overhaul | Done |
-| 6. Final polish | Done |
+## Phase: Firebase Migration & Nav Updates (March 2026)
 
-## Notes
-- Elien photo needs to be placed at `public/images/elien.png` by user
+### Phase 1: Navigation Updates
+| Task | Status |
+|------|--------|
+| Rename "Keuzehulp" to "Hondenkeuze" | Done |
+| Reorder nav: Over ons, Hondenkeuze, Puppyagenda, Prijzen, FAQ, Contact | Done |
+| Move route `/keuzehulp` to `/hondenkeuze` | Done |
+| Update all internal references | Done |
+| Add hover underline effect (brand green, desktop only) | Done |
+| Verify in browser | Done |
+
+### Phase 2: Firebase Hosting Setup
+| Task | Status |
+|------|--------|
+| Create `firebase.json` with hosting config | Done |
+| Create `.firebaserc` with project ID `website-f396e` | Done |
+| Update `next.config.ts` (remove GitHub Pages logic) | Done |
+
+### Phase 3: CI/CD Workflows
+| Task | Status |
+|------|--------|
+| Create staging workflow (preview channels, expires 7d) | Done |
+| Create production workflow (push to main → live) | Done |
+| Remove old GitHub Pages deploy workflow | Done |
+
+### Phase 4: Documentation
+| Task | Status |
+|------|--------|
+| Create `CLAUDE.md` with project context | Done |
+| Update `PROGRESS.md` with phased tracking | Done |
+
+### User Action Required
+| Task | Status |
+|------|--------|
+| Add `FIREBASE_SERVICE_ACCOUNT` secret to GitHub repo | Pending |
+
+---
+
+## Previous: Breed Selector Feature
+
+| Task | Status |
+|------|--------|
+| Elien photo on About page | Done |
+| WhatsApp floating button | Done |
+| Keuzehulp (now Hondenkeuze) integration | Done |
+| Contact page overhaul | Done |
+
+### Notes
 - Iframe X-Frame-Options needs configuring on keuzehulp.letsdog.nl
