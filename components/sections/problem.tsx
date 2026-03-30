@@ -43,7 +43,7 @@ export function Problem() {
         {problems.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
-            className="bg-white rounded-2xl p-8 border border-[#141414]/6 hover:border-[#75876D]/30 transition-colors duration-200 group"
+            className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:bg-white/80 hover:shadow-[0_6px_24px_rgba(0,0,0,0.1)] transition-all duration-300 group"
           >
             <div className="w-11 h-11 rounded-xl bg-[#DFF0C3] flex items-center justify-center mb-5 group-hover:bg-[#75876D]/20 transition-colors duration-200">
               <Icon size={20} className="text-[#75876D]" strokeWidth={1.75} />

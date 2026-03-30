@@ -106,7 +106,7 @@ export default function FAQ() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-[#75876D] pt-32 pb-20 px-6 lg:px-8">
+      <div className="bg-[#75876D] pt-32 pb-14 min-h-[220px] flex items-end px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-4">FAQ</p>
           <h1 className="font-heading font-bold text-4xl md:text-5xl text-white leading-tight max-w-xl">
@@ -132,7 +132,7 @@ export default function FAQ() {
         </div>
 
         {/* Still have questions */}
-        <div className="max-w-2xl mx-auto mt-16 bg-white rounded-2xl p-8 text-center border border-[#141414]/8">
+        <div className="max-w-2xl mx-auto mt-16 bg-white/60 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.06)]">
           <h3 className="font-heading font-bold text-xl text-[#141414] mb-3">Staat je vraag er niet bij?</h3>
           <p className="text-[#141414]/60 text-[15px] mb-6">Stuur ons een bericht. We antwoorden binnen 1 werkdag.</p>
           <a

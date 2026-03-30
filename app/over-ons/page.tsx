@@ -26,7 +26,7 @@ export default function OverOns() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-[#75876D] pt-32 pb-20 px-6 lg:px-8">
+      <div className="bg-[#75876D] pt-32 pb-14 min-h-[220px] flex items-end px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-4">Over ons</p>
           <h1 className="font-heading font-bold text-4xl md:text-5xl text-white leading-tight max-w-xl">
@@ -85,14 +85,23 @@ export default function OverOns() {
           <p className="text-sm font-semibold text-[#75876D] uppercase tracking-widest mb-4">Certificeringen</p>
           <h2 className="font-heading font-bold text-3xl text-[#141414]">Erkend. Wetenschappelijk. Betrouwbaar.</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
           {certs.map(({ name, desc }) => (
-            <div key={name} className="bg-white rounded-2xl p-8 border border-[#141414]/8 text-center">
+            <div key={name} className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:bg-white/80 hover:shadow-[0_6px_24px_rgba(0,0,0,0.1)] transition-all duration-300 text-center">
               <Award size={32} className="text-[#75876D] mx-auto mb-4" strokeWidth={1.5} />
               <p className="font-heading font-bold text-xl text-[#141414] mb-2">{name}</p>
               <p className="text-[#141414]/55 text-sm leading-relaxed">{desc}</p>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center">
+          <Image
+            src={asset("/images/NVGH Logo.jpeg")}
+            alt="NVGH en Raad van Beheer certificeringslogo's"
+            width={400}
+            height={120}
+            className="max-w-xs md:max-w-sm h-auto"
+          />
         </div>
       </SectionWrapper>
 

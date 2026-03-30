@@ -57,7 +57,7 @@ export default function Prijzen() {
   return (
     <>
       {/* Hero */}
-      <div className="bg-[#75876D] pt-32 pb-20 px-6 lg:px-8">
+      <div className="bg-[#75876D] pt-32 pb-14 min-h-[220px] flex items-end px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-4">Prijzen</p>
           <h1 className="font-heading font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
@@ -73,7 +73,7 @@ export default function Prijzen() {
       <SectionWrapper className="bg-[#EFE8E4]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
           {/* Free */}
-          <div className="bg-white rounded-2xl p-8 border border-[#141414]/8 flex flex-col">
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:bg-white/80 hover:shadow-[0_6px_24px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col">
             <p className="text-sm font-semibold text-[#141414]/50 uppercase tracking-wider mb-3">Gratis</p>
             <div className="flex items-end gap-2 mb-2">
               <span className="font-heading font-bold text-5xl text-[#141414]">€0</span>
@@ -103,7 +103,7 @@ export default function Prijzen() {
           </div>
 
           {/* Paid */}
-          <div className="relative bg-[#75876D] rounded-2xl p-8 flex flex-col shadow-xl">
+          <div className="relative bg-[#75876D]/90 backdrop-blur-sm rounded-2xl p-8 flex flex-col border border-[#75876D]/60 shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:bg-[#75876D] hover:shadow-[0_6px_24px_rgba(0,0,0,0.18)] transition-all duration-300">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#FFA580] text-[#141414] text-xs font-bold uppercase tracking-wide shadow-md">
                 Launch aanbieding

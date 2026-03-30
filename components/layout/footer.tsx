@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 export function Footer() {
   return (
@@ -7,9 +9,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 mb-12">
           {/* Brand */}
           <div>
-            <p className="font-heading font-bold text-xl text-white mb-3 tracking-tight">
-              Let&apos;s Dog
-            </p>
+            <Image
+              src={asset("/images/logo-white.svg")}
+              alt="Let's Dog"
+              width={120}
+              height={35}
+              className="h-8 w-auto mb-3"
+            />
             <p className="text-sm leading-relaxed text-white/60 max-w-xs">
               Puppytraining die werkt. Gebouwd door gecertificeerde hondengedragstherapeuten.
             </p>
@@ -23,10 +29,10 @@ export function Footer() {
             <ul className="space-y-2.5" role="list">
               {[
                 { href: "/", label: "Homepage" },
-                { href: "/over-ons", label: "Over ons" },
                 { href: "/hondenkeuze", label: "Hondenkeuze" },
                 { href: "/puppyagenda", label: "Puppyagenda" },
                 { href: "/prijzen", label: "Prijzen" },
+                { href: "/over-ons", label: "Over ons" },
                 { href: "/veelgestelde-vragen", label: "FAQ" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
@@ -66,7 +72,7 @@ export function Footer() {
           <p className="text-xs text-white/40">
             © {new Date().getFullYear()} Let&apos;s Dog. Alle rechten voorbehouden.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 flex-wrap">
             <Link
               href="/privacybeleid"
               className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200"
@@ -78,6 +84,18 @@ export function Footer() {
               className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200"
             >
               Algemene voorwaarden
+            </Link>
+            <Link
+              href="/ai-gebruiksvoorwaarden"
+              className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200"
+            >
+              AI-gebruiksvoorwaarden
+            </Link>
+            <Link
+              href="/cookieverklaring"
+              className="text-xs text-white/40 hover:text-white/70 transition-colors duration-200"
+            >
+              Cookieverklaring
             </Link>
           </div>
         </div>
