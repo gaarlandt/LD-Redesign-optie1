@@ -34,7 +34,7 @@ export function Pricing() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {/* Free tier */}
-        <div className="bg-white rounded-2xl p-8 border border-[#141414]/8 flex flex-col">
+        <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:bg-white/80 hover:shadow-[0_6px_24px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col">
           <div className="mb-6">
             <p className="text-sm font-semibold text-[#141414]/50 uppercase tracking-wider mb-2">
               Gratis
@@ -80,7 +80,7 @@ export function Pricing() {
         </div>
 
         {/* Paid tier */}
-        <div className="relative bg-[#75876D] rounded-2xl p-8 border border-[#75876D] flex flex-col shadow-xl">
+        <div className="relative bg-[#75876D]/90 backdrop-blur-sm rounded-2xl p-8 border border-[#75876D]/60 flex flex-col shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:bg-[#75876D] hover:shadow-[0_6px_24px_rgba(0,0,0,0.18)] transition-all duration-300">
           {/* Launch badge */}
           <div className="absolute -top-4 left-1/2 -translate-x-1/2">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#FFA580] text-[#141414] text-xs font-bold uppercase tracking-wide shadow-md">

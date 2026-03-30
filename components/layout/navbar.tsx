@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { asset } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "/over-ons", label: "Over ons" },
   { href: "/hondenkeuze", label: "Hondenkeuze" },
   { href: "/puppyagenda", label: "Puppyagenda" },
   { href: "/prijzen", label: "Prijzen" },
+  { href: "/over-ons", label: "Over ons" },
   { href: "/veelgestelde-vragen", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
@@ -38,10 +40,17 @@ export function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-heading font-bold text-xl text-[#141414] tracking-tight hover:text-[#75876D] transition-colors duration-200"
+          className="flex-shrink-0 hover:opacity-80 transition-opacity duration-200"
           aria-label="Let's Dog — terug naar homepage"
         >
-          Let&apos;s Dog
+          <Image
+            src={asset("/images/logo-black.svg")}
+            alt="Let's Dog"
+            width={120}
+            height={35}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}

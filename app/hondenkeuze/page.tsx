@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { asset } from "@/lib/utils";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
-import { ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Hondenkeuze — Welk ras past bij jou? | Let's Dog",
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function Hondenkeuze() {
   return (
     <>
-      {/* Hero */}
-      <div className="bg-[#75876D] pt-32 pb-20 px-6 lg:px-8">
+      {/* Short green hero */}
+      <div className="bg-[#75876D] pt-32 pb-14 min-h-[220px] flex items-end px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-sm font-semibold text-white/60 uppercase tracking-widest mb-4">
             Hondenkeuze
@@ -22,35 +22,43 @@ export default function Hondenkeuze() {
           <h1 className="font-heading font-bold text-4xl md:text-5xl text-white leading-tight max-w-xl">
             Welk ras past bij jou?
           </h1>
-          <p className="text-white/70 text-lg mt-6 max-w-lg leading-relaxed">
-            Beantwoord 8 korte vragen over je levensstijl, woonruimte en ervaring. Je krijgt direct een persoonlijk rasadvies — gratis en vrijblijvend.
-          </p>
         </div>
       </div>
 
-      {/* Image accent */}
-      <div className="relative h-64 md:h-80 w-full">
-        <Image
-          src={asset("/images/puppy-harness.jpeg")}
-          alt="Puppy met tuigje — klaar voor een nieuw avontuur"
-          fill
-          sizes="100vw"
-          className="object-cover"
-          priority
-        />
-      </div>
+      {/* Content + Image side by side */}
+      <SectionWrapper className="bg-[#EFE8E4]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <p className="text-[#141414]/70 text-[16px] leading-relaxed mb-4">
+              Beantwoord 8 korte vragen over je levensstijl, woonruimte en ervaring. Je krijgt direct een persoonlijk rasadvies — gratis en vrijblijvend.
+            </p>
+            <p className="text-[#141414]/70 text-[16px] leading-relaxed mb-8">
+              Wetenschappelijk onderbouwd en ontwikkeld met gecertificeerde gedragstherapeuten.
+            </p>
+            <a
+              href="#quiz"
+              className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#75876D] text-white font-semibold text-[16px] hover:bg-[#65775D] transition-all duration-200"
+            >
+              Start de hondenkeuze
+              <ArrowRight size={16} strokeWidth={2} />
+            </a>
+          </div>
+
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+            <Image
+              src={asset("/images/puppy-harness.jpeg")}
+              alt="Puppy met tuigje — klaar voor een nieuw avontuur"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </SectionWrapper>
 
       {/* Iframe */}
-      <SectionWrapper className="bg-white">
-        <div className="text-center mb-10">
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-[#141414] mb-3">
-            Start de hondenkeuze
-          </h2>
-          <p className="text-[#141414]/60 text-[16px] max-w-md mx-auto">
-            De test duurt ongeveer 2 minuten. Na afloop krijg je direct je resultaat.
-          </p>
-        </div>
-
+      <SectionWrapper className="bg-white" id="quiz">
         <div className="rounded-2xl overflow-hidden border border-[#141414]/10 bg-[#EFE8E4]">
           <iframe
             src="https://keuzehulp.letsdog.nl"

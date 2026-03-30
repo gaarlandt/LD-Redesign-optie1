@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { asset } from "@/lib/utils";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
@@ -28,6 +31,15 @@ const steps = [
 ];
 
 export function HowItWorks() {
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (showToast) {
+      const timer = setTimeout(() => setShowToast(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showToast]);
+
   return (
     <SectionWrapper className="bg-white" id="hoe-het-werkt">
       <div className="text-center mb-16">
@@ -45,12 +57,10 @@ export function HowItWorks() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {steps.map(({ number, icon: Icon, title, description }, i) => (
           <div key={title} className="relative flex flex-col">
-            {/* Connector line on desktop */}
             {i < steps.length - 1 && (
               <div className="hidden md:block absolute top-8 left-[calc(50%+2rem)] right-[-50%] h-px bg-[#141414]/10" />
             )}
-
-            <div className="bg-[#EFE8E4] rounded-2xl p-8 flex flex-col h-full">
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/80 shadow-[0_4px_16px_rgba(0,0,0,0.06)] hover:bg-white/80 hover:shadow-[0_6px_24px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col h-full">
               <div className="flex items-center gap-4 mb-5">
                 <div className="w-12 h-12 rounded-xl bg-[#75876D] flex items-center justify-center flex-shrink-0">
                   <Icon size={20} className="text-white" strokeWidth={1.75} />
@@ -88,6 +98,49 @@ export function HowItWorks() {
               Bekijk video&apos;s tijdens je wandeling of trainingssessie. De web app is het hart — de app ondersteunt.
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* App Store badges */}
+      <div className="flex items-center justify-center gap-3 mt-8 relative">
+        <button
+          onClick={() => setShowToast(true)}
+          className="opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+          aria-label="Download in de App Store (binnenkort beschikbaar)"
+        >
+          <Image
+            src={asset("/images/app-store-badge.svg")}
+            alt="Download on the App Store"
+            width={140}
+            height={42}
+            className="h-[42px] w-auto"
+          />
+        </button>
+        <button
+          onClick={() => setShowToast(true)}
+          className="opacity-70 hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+          aria-label="Download in Google Play (binnenkort beschikbaar)"
+        >
+          <Image
+            src={asset("/images/google-play-badge.png")}
+            alt="Get it on Google Play"
+            width={156}
+            height={46}
+            className="h-[42px] w-auto"
+          />
+        </button>
+
+        {/* Toast */}
+        <div
+          className={`absolute -top-12 left-1/2 -translate-x-1/2 px-5 py-2.5 bg-[#141414] text-white text-sm font-medium rounded-full shadow-lg transition-all duration-300 whitespace-nowrap ${
+            showToast
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-2 pointer-events-none"
+          }`}
+          role="status"
+          aria-live="polite"
+        >
+          Binnenkort beschikbaar
         </div>
       </div>
     </SectionWrapper>

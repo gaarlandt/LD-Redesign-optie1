@@ -37,7 +37,10 @@ The preview sandbox requires Node v20 (not v24) — the launch.json uses the abs
 │   ├── over-ons/           # About page
 │   ├── prijzen/            # Pricing page
 │   ├── puppyagenda/        # Puppy agenda page
-│   └── veelgestelde-vragen/ # FAQ page
+│   ├── veelgestelde-vragen/ # FAQ page
+│   ├── privacybeleid/      # Privacy policy
+│   ├── ai-gebruiksvoorwaarden/ # AI terms of use
+│   └── cookieverklaring/   # Cookie declaration
 ├── components/
 │   ├── layout/             # Navbar, Footer
 │   ├── sections/           # Homepage sections (hero, problem, hope, etc.)
@@ -60,7 +63,7 @@ The preview sandbox requires Node v20 (not v24) — the launch.json uses the abs
 
 ## Navigation Order
 ```
-Over ons | Hondenkeuze | Puppyagenda | Prijzen | FAQ | Contact
+Hondenkeuze | Puppyagenda | Prijzen | Over ons | FAQ | Contact
 ```
 Defined in `components/layout/navbar.tsx` (desktop + mobile) and `components/layout/footer.tsx`.
 
